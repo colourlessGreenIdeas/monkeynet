@@ -34,6 +34,6 @@ class Trainer:
                     acc_epoch += network.accuracy(network.forward_pass(inp), out)
                 optimizer.update()
                     
-            print("epoch : {} | acc : {}".format(i, 100*acc_epoch/len(inputs)))
+            print("epoch : {} | acc : {} %".format(i, 100*acc_epoch/len(inputs)))
             
         

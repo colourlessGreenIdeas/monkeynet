@@ -38,7 +38,7 @@ mnist_validation_outputs = np.array([label_to_vector(vd_o) for vd_o in vd[1]])
 
 
 # We will have two layers in our neural network
-fc1 = FullyConnected(784,30)
+fc1 = FullyConnected(784,50)
 fc2 = FullyConnected(50,10)
 
 # Create the network
