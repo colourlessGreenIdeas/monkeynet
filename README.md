@@ -8,8 +8,8 @@
 - Test against MNIST
 
 **Note:**
-### # Get the data from here:
-### http://yann.lecun.com/exdb/mnist/    
+Get the data from here:
+http://yann.lecun.com/exdb/mnist/    
 
-### Make sure to gzip before using, like so:
-### gzip -d mnist.pkl.gz
+Make sure to gzip before using, like so:
+gzip -d mnist.pkl.gz
