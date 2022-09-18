@@ -5,7 +5,11 @@ fully connected sigmoid activated networks.
 the genesis of this was a way for me to get back into coding quickly and with
 an example I thought would blend math, algos, and python together.
 
-TODO: a whole bunch!
+**TODO**: a whole bunch!
+- add softmax
+- maybe add a convolution option
+- RelU activation
+- additional loss function [probably an entire class]
 
 ## Monkeynet: Order of operations:
 - Create Layers
