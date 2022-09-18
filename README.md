@@ -1,3 +1,12 @@
+## Background:
+this is not a serious deep learning package- although it works quite well for
+fully connected sigmoid activated networks.
+
+the genesis of this was a way for me to get back into coding quickly and with
+an example I thought would blend math, algos, and python together.
+
+TODO: a whole bunch!
+
 ## Monkeynet: Order of operations:
 - Create Layers
 - Create Network from Layers
