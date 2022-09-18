@@ -30,7 +30,8 @@ class Network:
 
         
     def backprop(self, inputs: Tensor, outputs: Tensor) -> None:
-
+        """the final layer is a special layer. The delt
+        is calculated differently than for subsequent layers"""
         self.delta = (self.activations[-1] - outputs) * self.sigmoid_deriv(self.zs[-1])
         self.layers[-1].delta = self.delta
         self.layers[-1].grad_b = self.delta
@@ -40,7 +41,7 @@ class Network:
         self.layers[-1].grad_ws.append(self.layers[-1].grad_w)
 
         for l in range(2, len(self.layers)+1):
-
+            # subsequent layers...
             self.delta = (self.layers[-l+1].weights.T @ self.delta) * self.sigmoid_deriv(self.zs[-l])
             
             self.layers[-l].grad_b = self.delta
@@ -58,6 +59,8 @@ class Network:
         return self.sigmoid(z) * (1 - self.sigmoid(z))
     
     def loss(self, predicted: Tensor, actual: Tensor)-> float:
+        """this is not a good loss function
+        """
         
         pred_idx = np.argmax(predicted)
         actual_idx = np.argmax(actual)
@@ -71,7 +74,7 @@ class Network:
         return np.sum((actual_arr - pred_arr) ** 2)
     
     def accuracy(self, predicted: Tensor, actual: Tensor)-> float:
-        
+        """This works well for classification but even then needs work"""
         pred_idx = np.argmax(predicted)
         actual_idx = np.argmax(actual)
         
