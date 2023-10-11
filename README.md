@@ -4,7 +4,7 @@ fully connected sigmoid activated networks.
 
 The genesis of this was a way for me to get back into coding quickly and with
 an example I thought would blend math, algos, and python together. And I wanted to build this with only
-one dependency- [numpy](https://numpy.org/).
+one dependency- <code>numpy</code>.
 
 As the name implies, I was simply monkeying around. Hence, monkeynet.
 
